@@ -112,52 +112,77 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Overview. -->
+        <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>The following highlights the main contributions of this work:</p>
+          <ul>
+            <li>Combine <strong>Deep Lagrangian Networks (DeLaN)</strong> with a nominal model to predict only the unknown dynamics.</li>
+            <li>Extend DeLaN to a contextual setting with a history encoder, enabling a <strong>single network</strong> to adapt to <strong>different dynamics</strong> and perform <strong>online identification</strong> of physically plausible models.</li>
+            <li>Integrate the Context-Aware DeLaN into an MPC — <strong>CaDeLaC</strong> — built using software frameworks (e.g., PyTorch, Acados, Pinocchio, L4CasADi).</li>
+            <li>Demonstrate the performance of <strong>CaDeLaC</strong> in <strong>zero-shot experiments</strong> on a <strong>real</strong> 7-DOF Franka Emika Panda robot, using a model trained fully in simulation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+
+    <div class="container is-max-desktop">
+        <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pick-and-place</h2>
+        <div class="content has-text-justified">
+          <p>To demonstrate <strong>CaDeLaC</strong> can adapt to dynamic changes in the environment, we evaluated in a pick-and-place task of a sequence of 3 kg and 2kg.</p>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JlC0trG5Wl0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+
+    <!-- Overview. -->
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
             We propose an extension of DeLaN to enable physically consistent online SysID by learning a contextual DeLaN model that obtains as additional input a latent representation of the environment that can be identified online. 
           </p>
-        </div>
+        </div> -->
         <!-- Architecture Image -->
-        <div>
+        <!-- <div>
           <img src="./static/images/contex_panda_delan_lstm_architecture_double.png"
                   class="interpolation-image"
                   alt="Context-Aware architecture."/>
               <p>Context-Aware architecture.</p>
-        </div>
+        </div> -->
         <!-- MPC-->
-        <div class="content has-text-justified">
+        <!-- <div class="content has-text-justified">
           <p>
             We combine this with an MPC.
           </p>
-        </div>
+        </div> -->
         <!-- CaDeLaC Image -->
-        <div>
+        <!-- <div>
           <img src="./static/images/context_aware_mpc_full_architecture.png"
                   class="interpolation-image"
                   alt="Cadelac."/>
               <p>CaDeLaC: Context-Aware Deep Lagrangian Model Predictive Control.</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Overview. -->
-    
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Controlling a robot based on physics-informed dynamic models, such as deep Lagrangian networks (DeLaN), can improve the generalizability and interpretability of the resulting behavior. However, in complex environments, the number of objects to potentially interact with is vast, and their physical properties are often uncertain. This complexity makes it infeasible to employ a single global model. Therefore, we need to resort to online system identification of context-aware models that capture only the currently relevant aspects of the environment. While physical principles such as the conservation of energy may not hold across varying contexts, ensuring physical plausibility for any individual context-aware model can still be highly desirable, particularly when using it for receding horizon control methods such as Model Predictive Control (MPC). Hence, in this work, we extend DeLaN to make it context-aware, combine it with a recurrent network for online system identification, and integrate it with a MPC for adaptive, physics-informed control. We also combine DeLaN with a residual dynamics model to leverage the fact that a nominal model of the robot is typically available. We evaluate our method on a 7-DOF robot arm for trajectory tracking under varying loads. Our method reduces the end-effector tracking error by 39%, compared to a 21% improvement achieved by a baseline that uses an extended Kalman filter.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
+  
     <!-- Paper video. -->
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -257,11 +282,8 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website source adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a>. Thank you to the original authors.
           </p>
         </div>
       </div>
