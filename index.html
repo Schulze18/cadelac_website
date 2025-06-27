@@ -65,7 +65,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2506.15249"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -74,7 +74,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2506.15249"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -173,41 +173,78 @@
 </section>
 
 
+<!-- BibTeX. -->
+<!-- Load Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <!-- Centered Section Title -->
+    <h2 class="title has-text-centered">BibTeX</h2>
+
+    <p>
+      If you find this work useful, please consider citing:
+    </p>
+
+    <!-- BibTeX Block with Copy Icon -->
+    <div style="position: relative;">
+      <button 
+        onclick="copyBibtex()" 
+        style="position: absolute; top: 0; right: 0; padding: 0.3em; background: none; border: none; cursor: pointer;"
+        aria-label="Copy BibTeX"
+      >
+        <i data-lucide="copy" style="width: 20px; height: 20px; color: #4a4a4a;"></i>
+      </button>
+
+      <pre><code id="bibtex-code">@misc{schulze2025contextawaredelan,
+  title={Context-Aware Deep Lagrangian Networks for Model Predictive Control}, 
+  author={Lucas Schulze and Jan Peters and Oleg Arenz},
+  year={2025},
+  eprint={2506.15249},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2506.15249} 
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Clipboard + Lucide Init -->
+<script>
+  // Activate Lucide icons
+  lucide.createIcons();
+
+  // Copy BibTeX handler
+  function copyBibtex() {
+    const code = document.getElementById("bibtex-code").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      alert("BibTeX copied to clipboard!");
+    }).catch(() => {
+      alert("Failed to copy BibTeX.");
+    });
+  }
+</script>
+<!--/ BibTeX. -->
+
+
+<!-- Acknowledgment. -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!--/ Animation. -->
 
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Acknowledgment</h2>
         <div class="content has-text-justified">
           <p>
-            Test</a>.
+            This project has been funded by the German Federal Ministry of Research, Technology and Space (BMBFTR) - Project number 01IS23057B.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{cadelac2025,
-  author    = {Schulze, Lucas and Peters, Jan and Arenz, Oleg},
-  title     = {Context-Aware Deep Lagrangian Networks for Model Predictive Control},
-  journal   = {},
-  year      = {2025},
-}</code></pre>
-  </div>
-</section>
-
+<!--/ Acknowledgment. -->
 
 <footer class="footer">
   <div class="container">
