@@ -1,6 +1,6 @@
 # CaDeLaC
 
-This is the repository that contains source code for the [Cadelac website](https://schulze18.github.io/cadelac_website).
+This is the repository that contains source code for the [CaDeLac website](https://schulze18.github.io/cadelac_website).
 
 If you find this work useful, please consider citing:
 ```
